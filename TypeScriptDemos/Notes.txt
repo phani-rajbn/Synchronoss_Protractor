@@ -1,0 +1,34 @@
+Trainer:Phaniraj
+Course: TypeScript with Protractor.
+Duration 4 Half days and 1 full day.
+
+Issues with JS:
+JS is not typesafe. It is dynamic where the success or the failure is identified only at runtime. It means as the JS does not have a compiler, there is no possibility of identifying the errors before the execution happens. 
+There is not strict type checking syntax which might help in maintaining the app-code. 
+There are no specific syntactical differences while working with functions and objects. 
+Very hard to identify b.w the arrays and classes. 
+Including other JS files are not possible in the JS code. It must be included thro an HTML page only.
+
+What is TypeScript?
+Its an Open source OOP language. developed and maintained by MS. This is designed by Anders Hejlsberg, the designer of C#. It is maintained under the Apache 2.0 Open source. First released in 2012 with v0.8. Basically a superset of JS. It is strongly typed and comes with a compiler(Transpiler) which converts the Typesafe TypeScript to JS. Saved with an Extension .ts and generates files with extension .js. 
+TypeScript cannot be executed directly on any browsers. It has to be compiled to a JS file and then JS file will be used in the HTML..
+Thro configs, U could determine the final output of the JS file that U want to use. It could be a ES5 or ES6v.  TypeScript could be considered as ES6 version of JS with some add on features in it. 
+
+Why?
+TypeScript supports complete OOP support like inheritance, method overloading, static and non-static members, clean object creation syntax(Constructors), Optional parameters for methods. 
+It supports classes, interfaces, Abstract classes, generics...
+Because of its type safetyness, its easy to develop and maintain. 
+It provides an error checking feature at the compile time only so that no surprise errors occur. Features like Type inference will ensure that the scope variables are handled in a proper way. 
+Errors are highlighted even before the code is transpiled. 
+TypeScript is used for both server side as well as client side scripting. Upgrading the existing JS code is as simple as saving the JS files as .ts files and transpiling it according to the ES stds that U wish to generate. 
+Faster execution of the code as not much runtime type checking happens that the code will be executed almost like any high level language does it. 
+Popular Web Frameworks like Angular, Protractor and Jasmine are using typescript for the next gen app development. 
+
+How to work with Typescript:
+Install nodejs
+Install tsc using npm 
+Code in any IDE like VS Code, Sublime Text, Atom etc...
+Compile the code using tsc command from the command line to generate the required output. 
+
+
+

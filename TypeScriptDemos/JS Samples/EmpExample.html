@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="main.js"></script>
+    <script src="Arrays.js"></script>
+    <script src="Common.js"></script>
+    <style>
+     *{
+         padding: 15px;
+         margin: 15px;
+         color:darkblue;
+         background-color: lightblue;
+     }
+     /* table{
+         width: 65%;
+     } */
+    </style>
+    <script>
+        var database = new empRepository();
+        function populate(){
+            var records = database.getAllEmployees();
+            records.forEach(element => {
+                var tr ='<tr><td>' + element.empID +'</td><td>' + element.empName +'</td><td>';
+                tr += '<a href="#">Edit</a></td></tr>';
+                $('tblData').innerHTML += tr;
+            });
+        }
+        function init(){
+            populate();
+        }
+        window.addEventListener('load', init);
+    </script>
+</head>
+<body>
+    <div >
+    <div style="background-color: blue; color:yellowgreen; height: 50px;">
+        <a href="#">AllEmployees</a>
+        <a href="#">Add New Employee</a>
+    </div>
+    <div style="display:inline-block; width: 45%;">
+        <h1>Employees with us!!!</h1>
+        <table border="1" id='tblData'></table>
+    </div>
+    <div style="display:inline-block; width: 50%">
+        <h1>Editing the emp Details</h1>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS code in action</title>
+    <script src="main.js"></script>
+    <script src="Common.js"></script>
+    <script src="Arrays.js"></script>
+    <script>
+        function onClick(){
+            var firstValue = parseFloat($('first').value);
+            var secondValue = parseFloat($('second').value);
+            var result = 0.0;
+            console.log(typeof(firstValue))
+            console.log(typeof(secondValue))
+            var operand = $('operand').value;
+            switch(operand)  {
+                case '+':
+                    result = addFunc(firstValue, secondValue);
+                    break;
+                case '-':
+                    result = subFunc(firstValue, secondValue);
+                    break;
+                case 'X':
+                    result = mulFunc(firstValue, secondValue);
+                    break;
+                case '/':
+                    result = divFunc(firstValue, secondValue);
+                    break;
+            }
+            console.log(result);
+            $('spDisplay').innerHTML = "<b>" + result +"</b>";
+        }
+        //NaN is obtained as a result if U R computing a non number value with another number value and try to get a result out of it...
+        //undefined is obtained when a variable is declared but is not assigned with any value in the course of its execution...
+        function init(){
+            var data = getElements();
+            var tbl = $('tblFruits');
+            tbl.innerHTML='';//resets the value so that the entrieis are made from the begining...
+            data.forEach(element => {
+                var row ='<tr><td>' + element +'</td><td><a class="edit" href="#">X</a></td></tr>';
+                tbl.innerHTML +=row;
+                var allAnchors = document.getElementsByClassName('edit');
+                for (let index = 0; index < allAnchors.length; index++) {
+                    allAnchors[index].addEventListener('click', () => {
+                          removeElement(index);
+                          init();
+                    });
+                }
+            });
+        }
+        //Unobtrusive JS is a new way of writing JS code with event handling... 
+       window.addEventListener('load', ()=>{
+        //    var btn = $('btnClick');
+        //    btn.addEventListener('click', ()=>{
+        //        console.log(help()); 
+        //    });
+        init();
+        $click('btnAdd', ()=>{
+            addElement($('addFruit').value)//adds the element....
+            init();
+        })
+       }) 
+    </script>
+</head>
+<body>
+    <h1>Welcome to Web App development</h1>
+    <div style="display:none">
+           <h1>Calc Program</h1>
+           <p>
+              <input type="number" id="first" placeholder="Enter the first value"/>
+              <select id="operand">
+              <option>+</option>
+              <option>-</option>
+              <option>X</option>
+              <option>/</option>
+            </select>            
+            <input type="number" id="second" placeholder="Enter the second value"/>
+            <button id="btnClick">=</button>
+            <span id="spDisplay"></span>
+           </p> 
+    </div>
+    <div>
+        <input id="addFruit" placeholder="Add new Fruit"/>
+        <button id="btnAdd">Add</button>  
+        <table border="1" id="tblFruits">
+
+        </table>
+    </div>
+</body>
+</html>
