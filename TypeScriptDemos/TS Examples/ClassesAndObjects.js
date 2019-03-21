@@ -16,6 +16,7 @@ var Customer = /** @class */ (function () {
     return Customer;
 }());
 exports.Customer = Customer;
+//Injectors are the components that are used within UR class. These injectors may be external objects that make UR Component. They can be included in the object at the time object creations. So we could use it as private members thro the constructor syntax. Angular Framework uses this syntax for injecting component dependencies into the component. 
 var employee = /** @class */ (function () {
     function employee(no, name, addr) {
         this.no = no;

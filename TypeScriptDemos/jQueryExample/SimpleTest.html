@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .div{
+            width: 25%;
+            display:inline-block;
+            background-color: red;
+            color:yellow;
+            border: 3px;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 5px;
+            height: 400px;
+        }
+    </style>
+    <script>
+        $(document).ready(()=>{
+            $('.div').hide(2000);
+            $("a:eq(0)").click(()=>{
+                   $('.div').hide(2000);
+                $("div:eq(1)") .show(2000); 
+            })
+            $("a:eq(1)").click(()=>{
+                   $('.div').hide(2000);
+                $("div:eq(2)") .show(2000); 
+            })
+            $("a:eq(2)").click(()=>{
+                   $('.div').hide(2000);
+                $("div:eq(3)") .show(2000); 
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <a href="#">Display Records</a>  
+        <a href="#">Add New Record</a>  
+        <a href="#">About Us</a>  
+    </div>
+    <div class="div">
+        <h1>Display All</h1>
+    </div>
+    <div class="div">
+            <h1>Add record</h1>
+    </div>
+    <div class="div">
+        <h1>About Us</h1>
+    </div>
+</body>
+</html>
