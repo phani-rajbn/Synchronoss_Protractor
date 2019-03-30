@@ -1,0 +1,28 @@
+Angular is a framework for developing Web Applications that are executed on NodeJs environment. The Framework provides all the requirements for both the development as well as performing testing both Unit and E2E. It uses Jasmine and Karma for performing unit tests and running the Unit tests.  Karma is used for running the tests and Jasmine is used for developing the Unit tests. 
+
+Angular also uses Protractor, a Framework for performing e2e Testing on Angular Apps using Typescript as the programming language and Jasmine or Cucumber as the Testing Framework. Protractor also runs on Nodejs. It is an intergration of Selenium,, Jasmine and web driver to perform automated Testing on Angular Apps.
+When Angular is installed, U will automatically get all the required features for developing Protractor based Testing. U would need to install protractorjs from the npm which internally installs the web-driver manager which internally holds the Selenium server to be started. On this server, the e2e Testing will be performed. Nodejs acts like a container of all these servers in ur machine for performing these tests...
+With angular, all these things will be the part of the Angular environment itself and U could perform e2e testing on UR Angular App...
+ TO start:
+ npm install -g protractor
+ npm install -g @angular/cli: This is the Command line interface for createing boiler plates for Angular Apps...
+ ng new TestingApp : This command is used to create a sample Angular App...
+
+ Constituents of Angular App:
+ One or more modules: Each module contains:
+ Components: Code Behind, HTML View, CSS and spec for Unit Testing...
+ Classes: Type safe Entities
+ Interfaces: Type safe Definitions. 
+ Pipes: Filters for UR Applications which do Transformations...
+ Services: These are functions that can be used across the Components. Services are singleton objects. Services are created usually to interact with REST services that provide Async operations which we use using Observables<T>. Observables are newer version from ES 6 to replace Promise objects. 
+ Custom Directives: UR own interpretations of UR Templates...
+
+
+ 
+
+
+
+
+
+
+
